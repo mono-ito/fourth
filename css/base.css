@@ -1,0 +1,440 @@
+@charset "UTF-8";
+/* ----------------------------------------------------------
+ html5 elements
+---------------------------------------------------------- */
+article, aside, figure, figcaption, footer, header, nav, section
+{ display: block;}
+/* ----------------------------------------------------------
+ reseting
+---------------------------------------------------------- */
+body {
+  line-height: 2.2;
+  color: #312820;
+  font-size: 14px;
+  background-color: #f6f6f6;
+  letter-spacing: 0.02em;
+  -webkit-text-size-adjust: 100%;
+}
+body, input, textarea, select, button, pre, code {
+  font-family: Noto Sans, YuGothic, '游ゴシック', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+body, div, pre, p, blockquote, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, th, td, button, figure, figcaption
+{ margin: 0; padding: 0;}
+input, textarea
+{ margin: 0; font-size: 100%;}
+input, textarea, select
+{ /*-webkit-appearance: none;*/}
+textarea
+{ resize: none;}
+button
+{ border: none; overflow: visible; background: none; vertical-align: top;  font-size: 100%; color: inherit; cursor: pointer; -webkit-appearance: none;}
+label
+{ cursor: pointer;}
+table
+{ border-collapse: collapse; border-spacing: 0; font-size: 100%;}
+fieldset, img
+{ border: 0;}
+img
+{ height: auto; vertical-align: top;}
+address, caption, code, em, th
+{ font-style: normal; font-weight: normal;}
+ol, ul
+{ list-style: none;}
+caption, th
+{ text-align: left;}
+h1, h2, h3, h4, h5, h6, strong, em
+{ font-size: 100%; font-weight: normal;}
+a, input
+{/* outline: none; -webkit-tap-highlight-color:rgba(0,0,0,0);*/}
+sup, sub
+{ font-size: 63%;}
+sup
+{ vertical-align: top;}
+sub
+{ vertical-align: baseline;}
+*
+{ box-sizing: border-box; -webkit-box-sizing: border-box;}
+/* ----------------------------------------------------------
+ base Link
+---------------------------------------------------------- */
+a {
+  color: #854f10;
+  text-decoration: underline;
+}
+a:visited {}
+a:hover,
+a:active,
+a:focus { text-decoration: none;}
+/* ----------------------------------------------------------
+ clearfix
+---------------------------------------------------------- */
+.clearfix:before, .clearfix:after,
+.contents:before, .contents:after,
+.mod-top-01:before, .mod-top-01:after
+{
+  content: "";
+  display: table;
+}
+.clearfix:after,
+.contents:after,
+.mod-top-01:after
+{
+  clear: both;
+}
+/* For IE 6/7
+---------------------------------------------------------- */
+.clearfix,
+.contents
+{
+  *zoom: 1;
+}
+/* ----------------------------------------------------------
+ layout
+---------------------------------------------------------- */
+html { overflow-y: scroll;}
+body { text-align: center;}
+#wpadminbar { display: none;}
+/* ----------------------------------------------------------
+ wrapper
+---------------------------------------------------------- */
+.wrapper {
+  text-align: left;
+  width: 1050px;
+  margin: 0 auto;
+  background-color: #EBE8E4;
+}
+/* ----------------------------------------------------------
+ header
+---------------------------------------------------------- */
+.header {
+  text-align:  left;
+  border-bottom: 1px solid #bfb4a5;
+  padding: 0 0 15px 0;
+}
+  .header h1 {
+    font-weight: bold;
+    font-size: 2.4em;
+    padding: 0 40px;
+  }
+/* ----------------------------------------------------------
+ contents
+---------------------------------------------------------- */
+.contents {
+  position: relative;
+}
+/* ----------------------------------------------------------
+ footer
+---------------------------------------------------------- */
+.footer {
+  background-color: #1e1e1e;
+  min-width: 1060px;
+  width: 100%;
+}
+  .footer-in {
+    color: #f6f6f6;
+    font-size: 0.8em;
+    padding: 5px 0;
+    text-align: center;
+  }
+html,
+body,
+.wrapper {
+	height: 100%;
+}
+body > .wrapper {
+	height: auto;
+	min-height: 100%;
+	padding: 0 0 34px 0;
+}
+.footer {
+	margin-top: -34px;
+}
+/* ----------------------------------------------------------
+ section
+---------------------------------------------------------- */
+.sec-cmn-01 {
+  position: relative;
+  border-bottom: 1px dotted #bfb4a5;
+  padding: 40px;
+}
+/* ----------------------------------------------------------
+ box
+---------------------------------------------------------- */
+.box-cmn-01 {
+}
+/* ----------------------------------------------------------
+ module
+---------------------------------------------------------- */
+.mod-cmn-01 {
+}
+/* ----------------------------------------------------------
+ title
+---------------------------------------------------------- */
+h2 {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+/* ----------------------------------------------------------
+ list
+---------------------------------------------------------- */
+.list-cmn-01 {
+}
+/* ----------------------------------------------------------
+ table
+---------------------------------------------------------- */
+.table-cmn-01 {
+}
+  .table-cmn-01 th,
+  .table-cmn-01 td {
+  }
+  .table-cmn-01 th {
+  }
+  .table-cmn-01 td {
+  }
+/* ----------------------------------------------------------
+ text
+---------------------------------------------------------- */
+.color01 {
+  color: #7C5E11;
+}
+.size01 {
+  font-size: 1.4em;
+}
+/* ----------------------------------------------------------
+ button
+---------------------------------------------------------- */
+button {
+  margin: 15px 15px 15px 0;
+  background-color: #4E0001;
+  padding: 5px 15px;
+  color: #fff;
+  min-width: 60px;
+}
+/* ----------------------------------------------------------
+ slide
+---------------------------------------------------------- */
+#mainImg {
+  margin: 0 0 30px 0;
+}
+.imgController {
+}
+.imgController.mt30 {
+  margin: 30px 0 0 0;
+}
+  .imgController li {
+    float: left;
+    margin: 0 30px 0 0;
+    position: relative;
+  }
+  .imgController li:last-child {
+    margin: 0 0 0 0;
+  }
+    .imgController li a {
+    }
+      .imgController li a img {
+        width: 220px;
+      }
+    .imgController li p {
+      position: absolute;
+      display: inline-block;
+      padding: 0 0 12px 0;
+      background: url(../img/bg_arrow01.png) center bottom no-repeat;
+      top: -35px;
+      left: -10px;
+    }
+      .imgController li p span {
+        display: inline-block;
+        background-color: #000;
+        color: #fff;
+        padding: 0 10px;
+        font-size: 0.8em;
+      }
+#mainSlide {
+  width: 970px;
+  margin: 0 0 30px 0;
+  overflow: hidden;
+}
+  #mainSlideIn {
+    width: 3880px;
+    height: 295px;
+    position: relative;
+  }
+    #mainSlideIn ul {
+      position: absolute;
+      left: 0;
+    }
+      #mainSlideIn ul li {
+        float: left;
+      }
+
+/* ----------------------------------------------------------
+ box
+---------------------------------------------------------- */
+#box_sample_animate01 {
+  position: relative;
+  height: 300px;
+}
+  #box_sample_animate01 img {
+    position: absolute;
+    width: 200px;
+    left: 0;
+    top: 0;
+  }
+#boxPanel {
+  margin: 30px 0 0 0;
+}
+  .box-panel {
+    border: 1px solid #D0C7BB;
+  }
+    .box-panel h3 {
+      font-weight: bold;
+      font-size: 1.2em;
+      background-color: #bfb4a5;
+      padding: 5px 10px;
+      color: #3F3D3D;
+      cursor: pointer;
+    }
+    .box-panel p {
+      padding: 10px;
+    }
+#lightBox {
+  text-align: left;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -150px 0 0 -300px;
+  width:  600px;
+  height: 300px;
+  padding: 50px 70px;
+  background-color: #fff;
+  border: 3px solid #4B453B;
+  box-shadow: 5px 5px 20px 0px #000;
+}
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  width: 4000px;
+  height: 4000px;
+  opacity: 0.6;
+}
+
+/* ----------------------------------------------------------
+ dropDown
+---------------------------------------------------------- */
+#dropDown {
+  margin: 0 40px;
+}
+  #dropDown > ul {
+  }
+    #dropDown > ul > li {
+      position: relative;
+      text-align: center;
+      display: inline-block;
+      width: 320px;
+    }
+      #dropDown > ul > li > a {
+        display: inline-block;
+        width: 320px;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        background-color: #746D5F;
+      }
+      #dropDown > ul > li > a:hover {
+        background-color: #9E9A8D;
+      }
+        #dropDown > ul > li > ul {
+          position: absolute;
+          z-index: 9999;
+        }
+          #dropDown > ul > li > ul > li {
+          }
+            #dropDown > ul > li > ul > li > a {
+              border: 1px solid #9E9A8D;
+              border-top: none;
+              background-color: #f6f6f6;
+              display: inline-block;
+              width: 320px;
+              text-decoration: none;
+            }
+            #dropDown > ul > li > ul > li > a:hover {
+              text-decoration: underline;
+            }
+
+/* ----------------------------------------------------------
+ tab
+---------------------------------------------------------- */
+#btnTab {}
+#btnTab ul {
+  margin: 30px 0 0 0;
+}
+  #btnTab > ul > li {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    width: 320px;
+  }
+    #btnTab > ul > li > a {
+      display: inline-block;
+      width: 320px;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: #746D5F;
+    }
+    #btnTab > ul > li > a:hover,
+    #btnTab > ul > li > a.active {
+      background-color: #9E9A8D;
+    }
+#tabArea {
+  height: 250px;
+}
+  #tab01,
+  #tab02,
+  #tab03 {
+    position: absolute;
+    width: 968px;
+    height: 250px;
+    padding: 30px 50px;
+    border: 1px solid #9E9A8D;
+    background-color: #F0EDEA;
+  }
+    #tab01 h3,
+    #tab02 h3,
+    #tab03 h3 {
+      font-weight: bold;
+    }
+
+/* ----------------------------------------------------------
+ pararax
+---------------------------------------------------------- */
+#paraImg {
+  position: fixed;
+  z-index: -1;
+}
+
+#pararax .header {
+  text-align: center;
+  border-bottom: none;
+  padding: 0;
+  height: 100%;
+}
+  #pararax .header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -66px 0 0 -232px;
+    color: #fff;
+    font-size: 60px;
+    text-shadow: 0px 0px 10px #000;
+  }
+#pararax .sec-cmn-01 {
+  text-align: center;
+  border-bottom: none;
+  padding: 50px 100px;
+  background-color: #f6f6f6;
+  margin: 0 0 300px;
+}
+

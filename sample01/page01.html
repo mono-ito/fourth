@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQuery Practice</title>
+<link rel="stylesheet" href="../css/base.css" media="all">
+<script>
+onload = function() {
+  var e = document.getElementById("e");
+  (function move() {
+    move.endTime || (move.endTime = Date.now() + 2000);
+    var ratio = Math.min(1, 1 - (move.endTime - Date.now()) / 2000);
+    e.style.left = e.style.top = 100 * ratio + "px";
+    if(ratio < 1) {
+      setTimeout(move, 10);
+    } else {
+      disappear();
+    }
+  })();
+  var disappear = function () {
+    disappear.endTime || (disappear.endTime = Date.now() + 2000);
+    var ratio = Math.max(0, (disappear.endTime - Date.now()) / 2000);
+    e.style.opacity = ratio;
+    if(ratio > 0) {
+      setTimeout(disappear, 10);
+    }
+  };
+};
+</script>
+</head>
+<body>
+<div class="wrapper">
+
+  <header class="header">
+    <h1>jQuery Practice</h1>
+  </header>
+  
+  <div class="contents">
+    <div id="e" style="width: 200px;height: 200px; position: absolute; left: 0; top: 0; background-color: #7A3522;"></div>
+  </div><!-- /contents -->
+
+</div><!-- /wrapper -->
+
+<footer class="footer">
+  <div class="footer-in">
+    <p class="footer-copyright">Copyright &copy; 2016 monosus, inc. All Rights Reserved.</p>
+  </div><!-- /footer-in -->
+</footer>
+</body>
+</html>

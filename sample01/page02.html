@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQuery Practice</title>
+<link rel="stylesheet" href="../css/base.css" media="all">
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#e").animate({
+    left: '100px',
+    top: '100px'
+  }, 2000, function(){
+    $(this).fadeOut(2000);
+  });
+});
+</script>
+</head>
+<body>
+<div class="wrapper">
+
+  <header class="header">
+    <h1>jQuery Practice</h1>
+  </header>
+  
+  <div class="contents">
+    <div id="e" style="width: 200px;height: 200px; position: absolute; left: 0; top: 0; background-color: #7A3522;"></div>
+  </div><!-- /contents -->
+
+</div><!-- /wrapper -->
+
+<footer class="footer">
+  <div class="footer-in">
+    <p class="footer-copyright">Copyright &copy; 2016 monosus, inc. All Rights Reserved.</p>
+  </div><!-- /footer-in -->
+</footer>
+</body>
+</html>
